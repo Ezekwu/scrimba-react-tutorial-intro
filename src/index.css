@@ -1,13 +1,66 @@
-body {
+*{
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Fredoka', sans-serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+
+
+nav{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2.3rem 2rem;
+  background-color:#21222a ;
+}
+
+.logo-header{
+  display: flex;
+  align-items: center;
+}
+
+.logo-header img{
+  width: 70px;
+}
+
+.logo-header h3{
+  color: #61DAFB;
+  font-size: 2rem;
+}
+
+.nav-item h4{
+  font-size: 1.3rem;
+  color: #deebf8;
+  
+}
+
+.main{
+  padding: 3.3rem 2.9rem;
+  background-color: #282d35;
+  color: rgb(235, 235, 235);
+  background-image: url("./logo\ copy.svg");
+  background-repeat: no-repeat;
+  background-position:  155% 0%;
+  background-size: 700px;
+}
+.main h1{
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+  letter-spacing: -0.05rem;
+}
+.list{
+  padding: 2rem 2.8rem;
+}
+.list ul{
+  
+  max-width: 500px;
+}
+.list li{
+  font-size: 1.3rem;
+  margin-bottom: 1.5rem;
+}
+ul li::marker{
+  color: #61DAFB;
+  font-size: 1.9rem;
 }
