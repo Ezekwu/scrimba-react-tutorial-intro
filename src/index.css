@@ -5,62 +5,98 @@
   font-family: 'Fredoka', sans-serif;
 }
 
-
-
-nav{
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 2.3rem 2rem;
-  background-color:#21222a ;
-}
-
-.logo-header{
+.container{
+  background-color:#918E9B;
+  height: 100%;
   display: flex;
   align-items: center;
+  justify-content: center;
+  padding: 3rem 6rem;
+  
+}
+.header-image {
+  background-color: #1A1B21;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
+.header-image img{
+  width: 370px;
 }
 
-.logo-header img{
-  width: 70px;
+.main-content{
+  width: 370px;
+  
 }
-
-.logo-header h3{
-  color: #61DAFB;
+.main-info{
+  background-color: #1A1B21;
+  text-align: center;
+  padding: .7rem 2.3rem;
+  color: #F5F5F5;
+}
+.name h1{
+  color: #FFFFFF;
   font-size: 2rem;
+  margin-top: 1rem;
 }
-
-.nav-item h4{
-  font-size: 1.3rem;
-  color: #deebf8;
+.name h3{
+  color: #F3BF99;
+  font-size: 1.1rem;
+  font-weight: 300;
+  margin-bottom: .7rem;
+}
+.name p{
+  font-size: .9rem;
+  font-weight: lighter;
+}
+.socials{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: .8rem;
+  margin: 1rem 0 2rem;
+}
+.socials > a{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.6rem;
+  background-color: white;
+  padding: .5rem 2rem;
+  border-radius: 7px;
+  text-decoration: none;
+  color: black;
+}
+.socials > a h3{
+  font-size: 1rem;
+  font-weight: 400;
   
 }
-
-.main{
-  padding: 3.3rem 2.9rem;
-  background-color: #282d35;
-  color: rgb(235, 235, 235);
-  background-image: url("./logo\ copy.svg");
-  background-repeat: no-repeat;
-  background-position:  155% 0%;
-  background-size: 700px;
+#linkedin{
+  background-color: #5093E2;
+  color: white;
 }
-.main h1{
-  font-size: 3rem;
-  margin-bottom: 1.5rem;
-  letter-spacing: -0.05rem;
-}
-.list{
-  padding: 2rem 2.8rem;
-}
-.list ul{
+.about-interest{
+  text-align: left;
   
-  max-width: 500px;
 }
-.list li{
-  font-size: 1.3rem;
-  margin-bottom: 1.5rem;
+.about-interest > div{
+  margin-bottom: 2rem;
 }
-ul li::marker{
-  color: #61DAFB;
-  font-size: 1.9rem;
+.about-interest h2{
+  margin-bottom: .4rem;
+}
+.about-interest p{
+  font-size: .9rem;
+  font-weight: lighter;
+  line-height: 1.3rem;
+}
+footer{
+  background-color: #161619;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.2rem 0;
+  gap: 2rem;
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
 }
