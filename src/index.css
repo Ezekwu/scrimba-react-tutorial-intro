@@ -4,63 +4,62 @@
   box-sizing: border-box;
   font-family: 'Fredoka', sans-serif;
 }
-
-
+img{
+  max-width: 100%;
+}
 
 nav{
+  padding: 1.2rem 2.3rem ;
+  box-shadow: 0px 2px 7px rgba(0, 0, 0, 0.1);
+}
+
+.hero {
+  text-align: center;
+  padding: 2.5rem 2.3rem ;
+  
+}
+
+.hero-text{
+  text-align: left;
+  margin-top: 2rem;
+  width: 65%;
+}
+
+.hero-text h1{
+  margin-bottom: .8rem;
+}
+
+.card-section{
+  padding: 2.5rem 2.3rem ;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 2.3rem 2rem;
-  background-color:#21222a ;
+  gap: 1.2rem;
+  overflow-x: scroll;
+  max-width: 930px;
 }
-
-.logo-header{
+.card{
+  flex: 0 0 auto;
+  
+}
+.card > img{
+  margin-bottom: 10px;
+}
+.card-info{
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  gap: 7px;
 }
+.rating-country span {
+  padding: 3px;
 
-.logo-header img{
-  width: 70px;
 }
-
-.logo-header h3{
-  color: #61DAFB;
-  font-size: 2rem;
+.star img {
+  width: 15px;
 }
-
-.nav-item h4{
-  font-size: 1.3rem;
-  color: #deebf8;
-  
+.country{
+  color:#918E9B;
 }
-
-.main{
-  padding: 3.3rem 2.9rem;
-  background-color: #282d35;
-  color: rgb(235, 235, 235);
-  background-image: url("./logo\ copy.svg");
-  background-repeat: no-repeat;
-  background-position:  155% 0%;
-  background-size: 700px;
-}
-.main h1{
-  font-size: 3rem;
-  margin-bottom: 1.5rem;
-  letter-spacing: -0.05rem;
-}
-.list{
-  padding: 2rem 2.8rem;
-}
-.list ul{
-  
-  max-width: 500px;
-}
-.list li{
-  font-size: 1.3rem;
-  margin-bottom: 1.5rem;
-}
-ul li::marker{
-  color: #61DAFB;
-  font-size: 1.9rem;
+.price p span{
+  font-weight: bold;
 }

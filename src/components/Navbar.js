@@ -1,16 +1,13 @@
-import logo from '../logo.svg';
-
+import React from 'react'
+import logo from '../images/Vector.png'
 
 const Navbar = () => {
+    const img = require('../images/Vector.png')
     return (
+        
         <nav>
-            <div className="logo-header">
-                <img src={logo} alt="" />
-                <h3>ReactFacts</h3>
-            </div>
-            <div className="nav-item">
-                <h4>React Course- project 1</h4>
-            </div>
+            <img src={img} alt="" />
+            
         </nav>
     )
 }
