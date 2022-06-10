@@ -7,11 +7,7 @@ const CardSection = () => {
             {
                 Data.map((item)=>{
                     return <Card key={item.id}
-                            title={item.title} 
-                            price={item.price}
-                            img={item.img}
-                            rating={item.stats.rating}
-                            reviewCount={item.stats.reviewCount}/>
+                            item={item}/>
                 })
             }
         </section>

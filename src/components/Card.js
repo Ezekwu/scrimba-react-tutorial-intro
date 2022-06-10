@@ -1,22 +1,28 @@
 
 
-const Card = ({  title, price, img, rating, reviewCount }) => {
+const Card = ({ item }) => {
+    let badgeText
+    if(item.openSpots === 0){
+        badgeText = 'SOLD OUT'
+    } else if(item.location === 'online'){
+        badgeText = 'ONLINE'
+    }
     
     return (
         <div className="card">
-        
-            <img src={img} alt="" />
+            {badgeText && <div className="badge">{badgeText}</div>}
+            <img src={item.img} alt="" />
             <div className="card-info">
                 <div className='rating-country'>
                     <span className='star' ><img src={require('../images/Star 1.png')} alt="" /></span>
-                    <span className='rating'>{rating}</span>
-                    <span className='country'>({reviewCount}).USA</span>
+                    <span className='rating'>{item.stats.rating}</span>
+                    <span className='country'>({item.stats.reviewCount}).USA</span>
                 </div>
 
-                <p>{title}</p>
+                <p className='title'>{item.title}</p>
 
                 <div className="price">
-                    <p><span>From ${price}</span> / person</p>
+                    <p><span>From ${item.price}</span> / person</p>
                 </div>
             </div>
             

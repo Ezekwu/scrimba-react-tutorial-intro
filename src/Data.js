@@ -25,7 +25,7 @@ export default [
     },
     {
         id: 3,
-        title: "Group Mountain Biking",
+        title: "Group Mountain Biking ",
         price: 50,
         img : '../images/mountain-bike 1 (2).png',
         stats: {

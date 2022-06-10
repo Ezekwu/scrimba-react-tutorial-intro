@@ -36,19 +36,35 @@ nav{
   align-items: center;
   gap: 1.2rem;
   overflow-x: scroll;
-  max-width: 930px;
+  max-width: 680px;
 }
 .card{
   flex: 0 0 auto;
-  
+  width: 175px;
+  min-height: 340px;
+  position: relative;
+}
+.badge{
+  position: absolute;
+  background-color: #fff;
+  font-size: .76rem;
+  padding: .3rem;
+  border-radius: 3px;
+  top: 6px;
+  left: 6px;
 }
 .card > img{
   margin-bottom: 10px;
+  height: 100%;
 }
 .card-info{
   display: flex;
   flex-direction: column;
   gap: 7px;
+}
+.title{
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .rating-country span {
   padding: 3px;
