@@ -1,16 +1,10 @@
-import logo from '../logo.svg';
-
+import React from 'react'
 
 const Navbar = () => {
     return (
         <nav>
-            <div className="logo-header">
-                <img src={logo} alt="" />
-                <h3>ReactFacts</h3>
-            </div>
-            <div className="nav-item">
-                <h4>React Course- project 1</h4>
-            </div>
+            <img src="../images/Fill 213.png" alt="" />
+            <h3>my travel journal.</h3>
         </nav>
     )
 }

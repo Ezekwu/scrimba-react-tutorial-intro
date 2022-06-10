@@ -8,59 +8,80 @@
 
 
 nav{
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 2.3rem 2rem;
-  background-color:#21222a ;
-}
-
-.logo-header{
+  background-color: #F55A5A;
+  color: #F5F5F5;
   display: flex;
   align-items: center;
+  justify-content: center;
+  gap: .6rem;
+  padding: 1.4rem 0;
 }
-
-.logo-header img{
-  width: 70px;
+nav h3{
+  font-size: 1.2rem;
+  font-weight: 300;
 }
-
-.logo-header h3{
-  color: #61DAFB;
-  font-size: 2rem;
+.location{
+  display: flex;
+  gap: 1.7rem;
+  margin-bottom: 2.5rem;
+  padding: 1.8rem;
 }
-
-.nav-item h4{
-  font-size: 1.3rem;
-  color: #deebf8;
-  
+.location img{
+  width: 150px;
 }
-
 .main{
-  padding: 3.3rem 2.9rem;
-  background-color: #282d35;
-  color: rgb(235, 235, 235);
-  background-image: url("./logo\ copy.svg");
-  background-repeat: no-repeat;
-  background-position:  155% 0%;
-  background-size: 700px;
+  padding: 4rem 2.5rem;
+
 }
-.main h1{
-  font-size: 3rem;
-  margin-bottom: 1.5rem;
-  letter-spacing: -0.05rem;
-}
-.list{
-  padding: 2rem 2.8rem;
-}
-.list ul{
+.main > div:not(:last-child){
+  border-bottom: 1px solid #F5F5F5;
   
+}
+
+.info{
   max-width: 500px;
+  
+  padding: 1.2rem 0;
 }
-.list li{
-  font-size: 1.3rem;
-  margin-bottom: 1.5rem;
+.country-link{
+  display: flex;
+  gap: .8rem;
+  margin-bottom: .5rem;
 }
-ul li::marker{
-  color: #61DAFB;
-  font-size: 1.9rem;
+.country-link > span{
+  display: flex;
+  align-items: center;
+  gap: .4rem;
+}
+.country-link > span h4{
+  font-weight: 400;
+  font-size: .7rem;
+  letter-spacing: 2px;
+}
+.country-link > span img{
+  width: 9px;
+}
+.country-link a{
+  color: #918E9B;
+  font-weight: 300;
+  font-size: .8rem;
+}
+
+.landmark{
+  font-weight: bolder;
+  font-size: 1.75rem;
+  margin-bottom: 1.3rem;
+  color: #2B283A;
+}
+
+.date{
+  font-size: .8rem;
+  margin-bottom: .7rem;
+  color: #2B283A;
+}
+
+.description{
+  font-size: .8rem;
+  color: #2B283A;
+  line-height: 1.3rem;
 }
