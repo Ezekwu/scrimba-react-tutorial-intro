@@ -80,21 +80,25 @@ button{
   border: 2px solid black;
   border-radius: 5px;
 }
-form{
-  width: 400px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.5);
-  padding: 1.5rem;
-  gap: 2rem;
-  border-radius: 6px;
+.meme{
+  position: relative;
 }
-.check-container{
-  display: flex;
-  gap: 1rem;
+.meme-text{
+  position: absolute;
 }
-input{
-  padding: .4rem;
-  
+.bottom{
+  bottom: 20px;
+  left: 0;
+  right: 0;
+  color: white;
+  font-size: 2.2rem;
+  text-shadow: 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black ;
+}
+.top{
+  top: 20px;
+  left: 0;
+  right: 0;
+  color: white;
+  font-size: 2.2rem;
+  text-shadow: 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black ;
 }

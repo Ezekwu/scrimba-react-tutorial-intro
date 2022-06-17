@@ -1,66 +1,68 @@
-import { useState } from "react"
+import { useState, useEffect } from "react"
 
 
 const Main = () => {
-    
-    const [formData, setFormData] = useState({
-        username: "",
-        password: "",
-        passwordConfirmation: "",
-        
+    const [meme, setMeme] = useState({
+        toptext: "",
+        bottomText: "",
+        image :"https://i.imgflip.com/30b1gx.jpg"
     })
-    const handleChange =  (e) => {
-        const {name, value, checked} = e.target;
-        setFormData(prevData => {
-            return  {
-                ...prevData,
-                [name]: value
+    const [memesData, setMemesData] = useState([]);
+
+    const handleChange = (e) => {
+        const {name, value} = e.target
+        setMeme(prevState => ({
+            ...prevState,
+            [name] : value
+
+        }))
+    }
+
+    useEffect(()=> {
+        fetch(`https://api.imgflip.com/get_memes`)
+        .then(res => res.json())
+        .then(data => setMemesData(data.data.memes))
+        
+    },[])
+    
+    
+    const getMemeImage = () =>{
+        const randomNumber = Math.floor(Math.random() * memesData.length );
+        const url =memesData[randomNumber].url;
+        setMeme((prevState)=>{
+            return {
+                ...prevState,
+                image: url
             }
-            
         })
-        console.log(formData);
     }
-    const submit =(e) => {
-        e.preventDefault()
-        console.log(formData);
-    }
+
     return (
         <section className="main">
-            <form >
-                <input type="text"
-                placeholder="username"
-                name="username"
-                value={formData.username}
-                onChange={handleChange}/>
-
-                <input type="password"
-                placeholder="password" 
-                name="password"
-                value={formData.password}
-                onChange={handleChange}/>
-
-                <input type="text"  
-                placeholder="confirm password"
-                name="passwordConfirmation"
-                value={formData.passwordConfirmation}
-                onChange={handleChange}
-                />
-
-                <div className="check-container">
-                    <input type="checkbox" 
-                    id="check"/>
-                    <label htmlFor="check">join news letter</label>
-                </div>
-                <button>sign up</button>
-            </form>
-            {/* <div className="form">
+            
+            <div className="form">
                 <div className="input">
-                    <input type="text" placeholder="Top text" className="input-1" />
-                    <input type="text" placeholder="Bottom text" className="input-2"[i] />
+                    <input type="text"
+                    placeholder="Top text" 
+                    className="input-1" 
+                    name="toptext"
+                    value={meme.toptext}
+                    onChange={handleChange}/>
+                    
+                    <input type="text" 
+                    placeholder="Bottom text" 
+                    className="input-2" 
+                    name="bottomText"
+                    value={meme.bottomText}
+                    onChange={handleChange}/>
                 </div>
-                <button >Get a new meme image  🖼</button>
+                <button onClick={getMemeImage}>Get a new meme image  🖼</button>
             </div>
-            <img src="../images/memeimg.png" alt="" className="main-image"/> */}
+            <div className="meme">
+                <img src={meme.image} alt="" className="main-image"/>
+                <h2 className="meme-text top">{meme.toptext}</h2>
+                <h2 className="meme-text bottom">{meme.bottomText}</h2>
+            </div>
         </section>
     )
 }
