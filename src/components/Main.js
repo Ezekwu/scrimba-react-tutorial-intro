@@ -1,8 +1,8 @@
 
 
-const Main = () => {
+const Main = ({ light }) => {
     return (
-        <section className="main">
+        <section className={light ? "main light" : "main"}>
             <h1>Fun facts about React</h1>
             <div className="list">
                 <ul>
